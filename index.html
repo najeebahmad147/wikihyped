@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WIKI HYPE | Personal AI HUD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hud">
+    <div class="top">
+      <div>SYSTEM: <span class="online">ONLINE</span></div>
+      <div id="clock">00:00:00</div>
+      <div id="battery">PWR: 100%</div>
+    </div>
+
+    <div class="core">
+      <div class="reactor" id="reactor">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <button id="micbtn">INITIATE</button>
+      </div>
+      <p id="statustext">Click the Core to Activate WIKI HYPE Voice Protocol</p>
+    </div>
+
+    <div class="term">
+      <div id="chatlog">
+        <p class="aimsg">[WIKI HYPE]: Systems initialized. Awaiting your command, Boss.</p>
+      </div>
+      <div class="inp">
+        <input type="text" id="textinput" placeholder="Ask WIKI HYPE anything or speak...">
+        <button id="sendbtn">EXEC</button>
+        <button id="keybtn">API KEY</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="apimodal" class="modal hidden">
+    <div class="mcontent">
+      <h3>ENTER GROQ API KEY</h3>
+      <p>Paste your Groq key below:</p>
+      <input type="password" id="apikeyinput" placeholder="Paste key here...">
+      <div class="mactions">
+        <button id="savekeybtn">SAVE PROTOCOL</button>
+        <button id="closemodalbtn">CANCEL</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
